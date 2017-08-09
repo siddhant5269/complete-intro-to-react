@@ -1,5 +1,5 @@
 // @flow
-
+//this is where we create types to be used by the whole project
 export type Show = {
   title: string,
   description: string,

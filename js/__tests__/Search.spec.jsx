@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-import { shallow, render } from 'enzyme';
+import { shallow, render } from 'enzyme';//enzyme is a wrapper around react-render
 import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 import store from '../store';
@@ -9,6 +9,10 @@ import { setSearchTerm } from '../actionCreators';
 import preload from '../../data.json';
 import Search, { Unwrapped as UnwrappedSearch } from '../Search';
 import ShowCard from '../ShowCard';
+
+/*notes on test
+  
+*/
 
 test('Search renders correctly', () => {
   const component = shallow(<UnwrappedSearch shows={preload.shows} searchTerm="" />);

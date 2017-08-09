@@ -4,21 +4,21 @@ const webpack = require('webpack');
 const config = {
   context: __dirname,
   entry: [
-    'react-hot-loader/patch',
-    'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/only-dev-server',
+    'react-hot-loader/patch',//also initializing the hot loader patch by react it works with web pack HMR
+    'webpack-dev-server/client?http://localhost:8080',//saying what is the webpack dev server 
+    'webpack/hot/only-dev-server',//only in dev server
     './js/ClientApp.jsx'
   ],
   devtool: 'cheap-eval-source-map',
   output: {
     path: path.join(__dirname, 'public'),
     filename: 'bundle.js',
-    publicPath: '/public/'
+    publicPath: '/public/'//for hot module replacement
   },
   devServer: {
     hot: true,
     publicPath: '/public/',
-    historyApiFallback: true
+    historyApiFallback: true //tells if does not find route fall back to route in react 
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
@@ -32,7 +32,8 @@ const config = {
     reasons: true,
     chunks: true
   },
-  plugins: [new webpack.HotModuleReplacementPlugin(), new webpack.NamedModulesPlugin()],
+  plugins: [new webpack.HotModuleReplacementPlugin(),//gives functionality to web pack for creating connectors for hot reload
+     new webpack.NamedModulesPlugin()],//passes down the names of modules to notify something went wrong with a module
   module: {
     rules: [
       {

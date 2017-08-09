@@ -7,14 +7,15 @@
     "format": "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\"",
     "lint": "eslint **/*.{js,jsx} --quiet",
     "start": "NODE_ENV=server node server.js",
-    "test": "jest",
-    "test:coverage": "jest --coverage",
-    "test:update": "jest -u",
+    "test": "jest",//also sets the NODE_ENV = test
+    "test:coverage": "jest --coverage",//istanbul coverage
+    "test:update": "jest -u",//updates the snapshots
     "watch": "webpack --watch"
   },
   "jest": {
     "snapshotSerializers": [
-      "jest-serializer-enzyme"
+      "jest-serializer-enzyme"//hey when you encounter any enzyme 
+                              //component use this to serialize the component to create the snapshot
     ]
   },
   "dependencies": {

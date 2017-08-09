@@ -10,13 +10,15 @@
 		}]
 	],
   "plugins": [
-    "react-hot-loader/babel",
+    "react-hot-loader/babel",//creates the joints between components so that
+      // HMR(Hot module replacer) can know what to update and what not
     "babel-plugin-syntax-dynamic-import",
     "babel-plugin-dynamic-import-webpack",
     "babel-plugin-transform-class-properties"
   ],
   "env": {
-    "test": {
+    "test": {//this we need to include because web pack 
+      //does not run in test mode and node.js does not understand import
       "plugins": [
         "transform-es2015-modules-commonjs"
       ]

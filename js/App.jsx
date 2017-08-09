@@ -1,8 +1,8 @@
 // @flow
-
+//adding flow enables flow type checking in file
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import type { Match } from 'react-router-dom';
+import  { Match } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 import AsyncRoute from './AsyncRoute';
