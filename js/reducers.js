@@ -19,4 +19,4 @@ const apiData = (state = {}, action: Action) => {
 
 const rootReducer = combineReducers({ searchTerm, apiData });
 
-export default rootReducer;
+export default rootReducer;//root reducers always takes care of the default state

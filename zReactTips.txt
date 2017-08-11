@@ -1,0 +1,22 @@
+It is always advised to extract out similar html to a separate component.
+
+LifeCycle Methods are very common in react we should always use them wherever possible.
+ComponentWillMount gets called both on server and client sides if you are doing server side rendering.
+ComponentDidMount has an advantage that window object is always available inside the method because
+ it gets called after the component gets mounted on the DOM
+
+ Use React Performance Tools
+
+ For only react implementations see v3-17
+
+ After v3-17 redux implementation starts.
+Redux:
+ Its basically a tree of data similarly like react is a tree of components.
+ Each component tree can subscribe to particular branch of tree.
+
+ Reducer :
+  It's a function which takes a state and an action and returns a new state based upon the action.
+   Redux Loop:
+    Event Fired -> Event Handled -> Action Dispatched To Redux Reducer -> Reducer Taked the action and the current state and returns a new state
+    -> React Has Subscribed to the state change event -> Redux notifies that the state has changed to react->
+    React gets the new state and rerenders the dom based upon the diff in new virtual dom and old virtual dom
